@@ -11,7 +11,9 @@ export default (app) => {
 		const issue = context.payload.issue;
 		const issueBody = issue.body;
 
-		// Cache the repo code, use a component
+
+		await cacheRepo(app, context);
+
 
 
 		let issueCommentBody = 'Thank you for opening this issue!';
